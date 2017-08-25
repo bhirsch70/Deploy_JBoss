@@ -1,0 +1,7 @@
+---
+- name: Deploy JBoss EAP
+  hosts: all
+  become: true
+
+  roles:
+    - jboss-standalone
