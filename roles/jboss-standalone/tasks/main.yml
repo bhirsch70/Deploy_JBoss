@@ -35,6 +35,13 @@
   template:
     src: standalone.xml
     dest: /usr/share/jboss-as/standalone/configuration/
+  tags:
+    - install
+
+- name: Install new version of jboss-modules.jar
+  template:
+    src: jboss-modules-1.1.5.GA.jar
+    dest: /usr/share/jboss-as/jboss-modules.jar
   notify: restart jboss
   tags:
     - install
